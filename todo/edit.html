@@ -1,0 +1,6 @@
+<button ng-click="$ctrl.toggle()">Edit</button>
+<div ng-hide="$ctrl.clicked">
+	<label>Name: </label><input ng-model="$ctrl.itemName" type="text">
+	<label>Description: </label><input ng-model="$ctrl.itemDesc" type="text">
+	<button ng-click="$ctrl.save()">Save</button>
+</div>

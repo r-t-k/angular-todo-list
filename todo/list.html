@@ -1,0 +1,10 @@
+<h1>{{$ctrl.title}}</h1>
+<ul>
+	<li ng-repeat="item in $ctrl.list | filter: { active: true }">
+		<span><strong>{{item.name}}</strong></span>
+		<span>{{item.desc}}</span>
+		<todo-edit item-id="{{item.id}}"></todo-edit>
+		<todo-delete item-id="{{item.id}}"></todo-delete>
+	</li>
+</ul>
+
