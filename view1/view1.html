@@ -1,4 +1,33 @@
+<style>
+	#outer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-content: center;
+	}
+	#list {
+		width: 100%;
+	}
+	#controls {
+		margin-top: 100px;
+		width: 100%;
+		text-align: center;
+	}
+	todo-list {
 
-<todo-list title="List"></todo-list>
-<todo-add></todo-add>
-<todo-storage></todo-storage>
+		text-align: center;
+	}
+</style>
+
+<div id="outer">
+	<div id="list">
+		<todo-list title="TODO LIST"></todo-list>
+	</div>
+	<div id="controls">
+		<todo-add></todo-add>
+		<todo-storage></todo-storage>
+	</div>
+</div>
+
+

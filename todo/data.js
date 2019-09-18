@@ -2,7 +2,8 @@ angular.module('todo', []);
 
 
 angular.module('todo').value('data', {
-	listItems: []
+	listItems: [],
+	sessionImported: false
 });
 
 

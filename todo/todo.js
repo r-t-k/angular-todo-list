@@ -1,8 +1,10 @@
 function ListController(data, sessionData) {
 	var session = sessionData.importSession();
 	console.log(session);
-if(session !== false){
+
+if(session !== false && data.sessionImported === false){
 	data.listItems = session;
+	data.sessionImported = true;
 }
 	this.list = data.listItems;
 
@@ -12,6 +14,18 @@ angular.module('todo').component('todoList', {
 	templateUrl: 'todo/list.html',
 	//template  : '<p>text: <strong>{{vm.test}}</strong></p>',
 	controller : ['data','sessionData', ListController],
+	bindings   : {
+		items: '&',
+		title: '@',
+	}
+});
+function DoneController(data, sessionData) {
+	this.list = data.listItems;
+}
+angular.module('todo').component('doneList', {
+	templateUrl: 'todo/done.html',
+	//template  : '<p>text: <strong>{{vm.test}}</strong></p>',
+	controller : ['data','sessionData', DoneController],
 	bindings   : {
 		items: '&',
 		title: '@',

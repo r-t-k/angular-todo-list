@@ -1,0 +1,8 @@
+<h1>{{$ctrl.title}}</h1>
+<ul>
+	<li ng-repeat="item in $ctrl.list | filter: { active: false }">
+		<span><strong>{{item.name}}</strong></span>
+		<span>{{item.desc}}</span>
+	</li>
+</ul>
+

@@ -1,5 +1,23 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<style>
+  #outer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  #list {
+    width: 100%;
+  }
+  done-list {
+
+    text-align: center;
+  }
+</style>
+
+<div id="outer">
+  <div id="list">
+    <done-list title="Completed"></done-list>
+  </div>
+
+</div>
